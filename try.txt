@@ -1,8 +1,1 @@
-this is cat
-this is richmond BC 333 add a hotfix
-<<<<<<< HEAD
-this is hotfix
-this is econd hotfox stuff
-=======
-this is hotfix [add hotfix2]
->>>>>>> hotfix2
+this is master file
