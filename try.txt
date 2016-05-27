@@ -8,4 +8,4 @@ this is econd hotfox stuff  [add hotfix]
 
 I add hotfix2 here
 the line is added from feature-1, this line is added from feature-2
-
+2. add new hotfix 2
