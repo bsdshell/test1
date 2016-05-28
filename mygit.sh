@@ -9,14 +9,16 @@
         for i in "${!array[@]}"; do
             echo $leftBrack"$i$rightBrack"="$(echo -e "${array[$i]}" | sed -e 's/^[[:space:]]*//')"$rightBrack
         done
-    elif [ $# -gt 0 ]; then
-
-        if [ $1 -lt ${#array[@]} ]; then 
-            echo "branch=["${array[$1]}"]"
-            git checkout  "$(echo -e "${array[$1]}" | sed -e 's/^[[:space:]]*//')"
-        else 
-            echo "invalid branch [$1]"
-        fi 
+    else 
+        if [[ $1 =~ ^[0-9]+$ ]]; then
+            if [ $1 -lt ${#array[@]} ]; then 
+                echo "branch=["${array[$1]}"]"
+                git checkout  "$(echo -e "${array[$1]}" | sed -e 's/^[[:space:]]*//')"
+            else 
+                echo "invalid branch [$1]"
+            fi
+        fi
+         
 
         echo "len="${#array[@]}
 
